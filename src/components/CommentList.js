@@ -51,8 +51,10 @@ function CommentList({ comments }) {
 
     function removeComment (id) {
         let newComments = comments.filter(comment => comment.id != id) 
-       return setRemove(newComments)
-        console.log(newComments)
+        setRemove(newComments)
+        return (
+            <li>{newComments.id}</li>
+        )
     }
 
     return (
